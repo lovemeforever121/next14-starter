@@ -14,12 +14,12 @@ const Links = () => {
             path: "/about",
         },
         {
-            title: "Blogs",
-            path: "/blogs",
-        },
-        {
             title: "Contact",
             path: "/contact",
+        },
+        {
+            title: "Blogs",
+            path: "/blogs",
         },
     ];
     //Temporary

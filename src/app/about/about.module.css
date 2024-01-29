@@ -1,5 +1,35 @@
+.container{
+    display: flex;
+    gap: 100px;
+}
+.textContainer{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 .imageContainer{
+    flex:1;
     position: relative;
-    width:400px;
-    height: 400px;
+}
+
+.textContainer h2{
+    color: #3673fd;
+}
+
+.infos{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.info h2{
+    color: #3673fd;
+}
+.info p{
+    font-size: 14px;
+}
+
+.img{
+    object-fit: contain;
 }
