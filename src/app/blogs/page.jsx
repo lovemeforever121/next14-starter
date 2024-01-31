@@ -1,5 +1,6 @@
-const Blogs = () => {
-  return <div>Posts</div>;
+import Blogs from "@/components/blogs/Blogs";
+const myBlogs = () => {
+  return <Blogs />
 };
 
-export default Blogs;
+export default myBlogs;

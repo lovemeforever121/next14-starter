@@ -13,11 +13,12 @@ const ContactPage = () => {
                 />
             </div>
             <div className={styles.formContainer}>
-                <form>
-                    <input type="text" placeholder="Name and Surname" />
-                    <input type="text" placeholder="Email Address" />
-                    <input type="text" placeholder="Phone No. Optional" />
-                    <textarea>Message</textarea>
+                <form action="" className={styles.form}>
+                    <input type="text" placeholder="Name and Surname" name="name" />
+                    <input type="text" placeholder="Email Address" name="email" />
+                    <input type="text" placeholder="Phone No. Optional" name="phone" />
+                    <textarea placeholder="Message" cols="30" rows="10" name="message"></textarea>
+                    <button>Submit</button>
                 </form>
             </div>
         </div>
