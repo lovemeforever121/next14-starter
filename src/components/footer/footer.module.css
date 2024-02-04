@@ -13,3 +13,14 @@
 .text{
     font-size: 12px;
 }
+
+@media (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content:spac-around;
+        align-items:center;
+        color:grey;
+        height: 80px;
+    }
+}

@@ -1,45 +1,49 @@
-.container{
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    padding-top: 20px;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding-top: 20px;
 }
-.imgContainer{
-    flex:1;
-    position: relative;
-    height: 500px;
+.imgContainer {
+  flex: 1;
+  position: relative;
+  height: 500px;
 }
-.img{
-    object-fit: contain;
-}
-
-.formContainer{
-    flex:1;
+.img {
+  object-fit: contain;
 }
 
-.form{
-    display:flex;
-    flex-direction: column;
-    gap: 30px;
+.formContainer {
+  flex: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .form input,
-.form textarea{
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bgSoft);
-    outline: none;
-    color: var(--text);
+.form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bgSoft);
+  outline: none;
+  color: var(--text);
 }
 
-.form button{
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--bgSoft);
-    cursor: pointer;
-    color: var(--text);
+.form button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bgSoft);
+  cursor: pointer;
+  color: var(--text);
 }
 
-
+@media (max-width: 768px) {
+  .imgContainer {
+    display: none;
+  }
+}
