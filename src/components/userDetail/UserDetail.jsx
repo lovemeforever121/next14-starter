@@ -6,12 +6,13 @@ const data = async (id) => {
     return data;
 }
 const UserDetail = async (props) => {
+    console.log("id > ",props.id);
     const userData = await getUser(props.id);
   return (
     <>
       <div className={styles.detailText}>
         <span className={styles.detailTitle}>Author</span>
-        <span className={styles.detailValue}>{userData.name}</span>
+        <span className={styles.detailValue}>{userData?.username}</span>
       </div>
       <div className={styles.detailText}>
         <span className={styles.detailTitle}>Published</span>

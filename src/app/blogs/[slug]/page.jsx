@@ -14,8 +14,8 @@ const SinglePostPage = async ({ params }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image
-          src="https://images.pexels.com/photos/18764173/pexels-photo-18764173/free-photo-of-artist-sitting-and-painting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      <Image
+          src={singleData.img}
           alt="singe post image"
           fill
           className={styles.img}
@@ -35,7 +35,7 @@ const SinglePostPage = async ({ params }) => {
             <UserDetail id={singleData.userId} />
           </Suspense>
         </div>
-        <div className={styles.content}>{singleData.body}</div>
+        <div className={styles.content}>{singleData.desc}</div>
       </div>
     </div>
   );
