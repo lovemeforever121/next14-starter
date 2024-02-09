@@ -43,12 +43,7 @@ const postSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        password: {
-            type: String,
-            required: true,
-            min: 6,
-        },
-        img: {
+       img: {
             type: String,
         },
         slug: {

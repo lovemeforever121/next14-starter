@@ -6,7 +6,6 @@ const data = async (id) => {
     return data;
 }
 const UserDetail = async (props) => {
-    console.log("id > ",props.id);
     const userData = await getUser(props.id);
   return (
     <>
