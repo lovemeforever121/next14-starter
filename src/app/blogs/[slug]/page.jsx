@@ -4,17 +4,27 @@ import UserDetail from "@/components/userDetail/UserDetail";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 
-const data = async (post) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${post}`);
-  const data = await res.json();
-  return data;
+// const data = async (post) => {
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${post}`);
+//   const data = await res.json();
+//   return data;
+// };
+
+// dynamic content metadata
+export const generateMetadata = async ({ params }) => {
+
+  const singleData = await getPost(params.slug);
+  return {
+    title: singleData.title,
+    description: singleData.desc,
+  };
 };
 const SinglePostPage = async ({ params }) => {
   const singleData = await getPost(params.slug);
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-      <Image
+        <Image
           src={singleData.img}
           alt="singe post image"
           fill
