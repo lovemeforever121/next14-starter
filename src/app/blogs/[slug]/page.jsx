@@ -4,23 +4,31 @@ import UserDetail from "@/components/userDetail/UserDetail";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 
-// const data = async (post) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${post}`);
-//   const data = await res.json();
-//   return data;
-// };
+const data = async (post) => {
+  try {
+    const res = await fetch(`http://localhost:3000/api/blogs/${post}`);
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Error connecting api");
+  }
+};
 
 // dynamic content metadata
 export const generateMetadata = async ({ params }) => {
-
-  const singleData = await getPost(params.slug);
+  // const singleData = await getPost(params.slug);
+  const { slug } = params;
+  const singleData = await data(slug);
   return {
     title: singleData.title,
     description: singleData.desc,
   };
 };
 const SinglePostPage = async ({ params }) => {
-  const singleData = await getPost(params.slug);
+  const { slug } = params;
+  const singleData = await data(slug);
+  // const singleData = await getPost(params.slug);
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>

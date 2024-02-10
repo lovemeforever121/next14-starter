@@ -7,20 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test":"node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "jest"
   },
   "dependencies": {
     "mongoose": "^8.0.0",
     "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.9",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
-    "jest": {
-        "version": "^29.7.0",
-        "transform":{}
-    }
-  }
+    "jest": "^29.7.0"
+  },
+  "description": "First, install the dependencies:",
+  "main": "next.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
 }
